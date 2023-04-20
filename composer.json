@@ -60,7 +60,11 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
-    },
+    },"post-install-cmd": [
+        "php artisan clear-compiled",
+        "chmod -R 777 public/"
+    ],
+    
     "minimum-stability": "stable",
     "prefer-stable": true
 }
